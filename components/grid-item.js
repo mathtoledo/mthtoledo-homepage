@@ -1,6 +1,12 @@
-import NextLink from 'next/link'
 import Image from 'next/image'
-import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
+import {
+  Box,
+  Text,
+  LinkBox,
+  LinkOverlay,
+  Badge,
+  useColorModeValue
+} from '@chakra-ui/react'
 import { Global } from '@emotion/react'
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
@@ -21,24 +27,25 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
   </Box>
 )
 
-export const WorkGridItem = ({ children, id, title, thumbnail }) => (
-  <Box w="100%" textAlign="center">
-    <NextLink href={`/works/${id}`} passHref scroll={false}>
-      <LinkBox cursor="pointer">
-        <Image
-          src={thumbnail}
-          alt={title}
-          className="grid-item-thumbnail"
-          placeholder="blur"
-        />
-        <LinkOverlay href={`/works/${id}`}>
-          <Text mt={2} fontSize={20}>
-            {title}
-          </Text>
-        </LinkOverlay>
-        <Text fontSize={14}>{children}</Text>
-      </LinkBox>
-    </NextLink>
+export const SimpleGridItem = ({ title, thumbnail }) => (
+  <Box
+    w="100%"
+    textAlign="center"
+    bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.100')}
+    borderRadius="lg"
+    p={4}
+  >
+    <Image
+      src={thumbnail}
+      alt={title}
+      className="simple-grid-item-thumbnail"
+      loading="lazy"
+    />
+    <Box mt={2}>
+      <Badge rounded="lg" px="2" p={3} variantColor="teal">
+        {title}
+      </Badge>
+    </Box>
   </Box>
 )
 
