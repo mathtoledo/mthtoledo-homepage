@@ -1,5 +1,4 @@
 import NextLink from 'next/link'
-
 import {
   Divider,
   Link,
@@ -9,7 +8,6 @@ import {
   Button,
   List,
   ListItem,
-  Text,
   useColorModeValue,
   chakra
 } from '@chakra-ui/react'
@@ -20,7 +18,6 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 import Image from 'next/image'
-import styled from '@emotion/styled'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -46,7 +43,7 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Matheus Toledo
           </Heading>
-          <p>Developer / Tech enthusiast</p>
+          <p>Software engineer / Post graduate in Data Science and Big Data</p>
         </Box>
         <Box
           flexShrink={0}
@@ -78,21 +75,22 @@ const Home = () => (
           Is
         </Heading>
         <Paragraph>
-          "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-          consectetur, adipisci velit..."
-          <br />
-          <br />
-          Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
-          enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
-          exercitation amet. Nisi anim cupidatat excepteur officia.
-          Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
-          voluptate dolor minim nulla est proident. Nostrud officia pariatur ut
-          officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
-          commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
-          Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis
-          officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis
-          sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea
-          consectetur et est culpa et culpa duis.
+          Matheus is a full-stack developer based in Brazil with passion for
+          building apps and web apps. He has good experience in tech, from
+          planning and designing all the way to solving real-life problems with
+          code. Matheus loves data science and bioinformatics, fields that he is
+          always studying. When not working, he loves to enjoy the free time
+          hanging out with family/friends, read a good book or watch some
+          series. He is current working for{' '}
+          <NextLink
+            href="https://www.nextage.com.br/"
+            passHref
+            scroll={false}
+            target="_blank"
+          >
+            <Link>NextAge</Link>
+          </NextLink>{' '}
+          as a senior software engineer.
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/works" passHref scroll={false}>
@@ -107,13 +105,22 @@ const Home = () => (
         <Heading as="h2" variant="section-title">
           Bio
         </Heading>
-        <BioSection>
+        <BioSection mb={2}>
           <BioYear>1996</BioYear>
           Born in Paraná, Brazil.
         </BioSection>
-        <BioSection>
+        <BioSection mb={2}>
           <BioYear>2017</BioYear>
-          Started studies in ...
+          Undergraduate degree in Technology in Analysis and System Development.
+        </BioSection>
+        <BioSection mb={2}>
+          <BioYear>2020</BioYear>
+          Studied 3 years of Biomedical Informatics. I canceled the course
+          because I preferred to focus on my professional growth.
+        </BioSection>
+        <BioSection>
+          <BioYear>2022</BioYear>
+          Started especialization in Data Science and Big Data.
         </BioSection>
       </Section>
 
@@ -121,7 +128,7 @@ const Home = () => (
         <Heading as="h2" variant="section-title">
           Hobbies
         </Heading>
-        <Paragraph>Open Source, Gaming, ...</Paragraph>
+        <Paragraph>Music, Guitar, Gaming, Reading</Paragraph>
       </Section>
 
       <Section delay={0.3}>
