@@ -1,5 +1,4 @@
 import {
-  Link,
   Container,
   SimpleGrid,
   Divider,
