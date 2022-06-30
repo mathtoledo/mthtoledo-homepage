@@ -7,12 +7,18 @@ import {
   Badge,
   useColorModeValue,
   Center,
-  NextLink,
+  Link,
   Stack,
   Heading
 } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import { ChevronRightIcon, ExternalLinkIcon } from '@chakra-ui/icons'
+
+const Meta = ({ children }) => (
+  <Badge colorScheme="green" mr={2} mb={1} fontSize={12}>
+    {children}
+  </Badge>
+)
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
   <Box w="100%" textAlign="center">
@@ -54,7 +60,7 @@ export const SimpleGridItem = ({ title, thumbnail }) => (
   </Box>
 )
 
-export const WorkItem = ({ title, text, year, category }) => (
+export const WorkItem = ({ title, text, year, category, stack, website }) => (
   <Center>
     <Box
       w="100%"
@@ -68,9 +74,13 @@ export const WorkItem = ({ title, text, year, category }) => (
         <Heading textAlign="left" fontSize={24} variant="section-title">
           {title}
         </Heading>
-
         <Box>
           <ChevronRightIcon />
+        </Box>
+        <Box align={'left'} mb={2}>
+          <Badge fontSize={16} color={'teal'}>
+            {year}
+          </Badge>
         </Box>
         <Box>
           <Badge fontSize={16} color={'teal'}>
@@ -78,11 +88,24 @@ export const WorkItem = ({ title, text, year, category }) => (
           </Badge>
         </Box>
       </Stack>
-      <Box align={'left'} mb={2}>
-        <Badge fontSize={16} color={'teal'}>
-          {year}
-        </Badge>
-      </Box>
+      {website && (
+        <Stack direction={'row'} mb={2}>
+          <Box align={'left'}>
+            <Meta>Website</Meta>
+          </Box>
+          <Link href={website} target="_blank">
+            {website} <ExternalLinkIcon mx="2px" />
+          </Link>
+        </Stack>
+      )}
+      {stack && (
+        <Stack direction={'row'} mb={2}>
+          <Box align={'left'}>
+            <Meta>Stack</Meta>
+          </Box>
+          <Text>{stack}</Text>
+        </Stack>
+      )}
       <Text textAlign={'left'} mb={3} fontSize={16}>
         {text}
       </Text>

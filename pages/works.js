@@ -11,7 +11,7 @@ import Section from '../components/section'
 import { WorkItem } from '../components/grid-item'
 
 const Works = () => (
-  <Layout title="work()">
+  <Layout title="Works">
     <Container maxW="container.md">
       <Box
         borderRadius="lg"
@@ -27,13 +27,13 @@ const Works = () => (
       <SimpleGrid columns={[1, 1, 1]} gap={6}>
         <Section delay={0.2}>
           <WorkItem
-            title="Project 1"
-            text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-					nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-					erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-					et ea rebum. "
-            year={2022}
-            category={'website'}
+            title="Controlenamao"
+            text="POS application Startup with more than a thousand clients. In this project 
+            I worked in the core implementing payment integrations with credit/debit cards."
+            year={2018}
+            category={'web app'}
+            website={'https://controlenamao.com.br/'}
+            stack={'Java, Hibernate, AngularJS, MySQL, Datastore, AppEngine'}
           />
         </Section>
       </SimpleGrid>
