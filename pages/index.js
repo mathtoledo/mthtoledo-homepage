@@ -16,7 +16,7 @@ import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import { IoLogoLinkedin, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -135,8 +135,21 @@ const Home = () => (
         <Heading as="h2" variant="section-title">
           Social
         </Heading>
-
         <List>
+          <ListItem>
+            <Link
+              href="https://www.linkedin.com/in/matheus-toledo/"
+              target="_blank"
+            >
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<IoLogoLinkedin />}
+              >
+                @matheus-toledo
+              </Button>
+            </Link>
+          </ListItem>
           <ListItem>
             <Link href="https://github.com/mathtoledo" target="_blank">
               <Button
@@ -148,16 +161,6 @@ const Home = () => (
               </Button>
             </Link>
           </ListItem>
-
-          <Link href="https://twitter.com/mth.toledo" target="_blank">
-            <Button
-              variant="ghost"
-              colorScheme="teal"
-              leftIcon={<IoLogoTwitter />}
-            >
-              @mth.toledo
-            </Button>
-          </Link>
           <ListItem>
             <Link href="https://instagram.com/mth.toledo" target="_blank">
               <Button
