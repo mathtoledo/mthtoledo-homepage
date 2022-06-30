@@ -5,9 +5,14 @@ import {
   LinkBox,
   LinkOverlay,
   Badge,
-  useColorModeValue
+  useColorModeValue,
+  Center,
+  NextLink,
+  Stack,
+  Heading
 } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
   <Box w="100%" textAlign="center">
@@ -47,6 +52,42 @@ export const SimpleGridItem = ({ title, thumbnail }) => (
       </Badge>
     </Box>
   </Box>
+)
+
+export const WorkItem = ({ title, text, year, category }) => (
+  <Center>
+    <Box
+      w="100%"
+      textAlign="center"
+      p={5}
+      bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+      boxShadow={'2xl'}
+      borderRadius="lg"
+    >
+      <Stack direction={'row'} alignItems={'center'}>
+        <Heading textAlign="left" fontSize={24} variant="section-title">
+          {title}
+        </Heading>
+
+        <Box>
+          <ChevronRightIcon />
+        </Box>
+        <Box>
+          <Badge fontSize={16} color={'teal'}>
+            {category}
+          </Badge>
+        </Box>
+      </Stack>
+      <Box align={'left'} mb={2}>
+        <Badge fontSize={16} color={'teal'}>
+          {year}
+        </Badge>
+      </Box>
+      <Text textAlign={'left'} mb={3} fontSize={16}>
+        {text}
+      </Text>
+    </Box>
+  </Center>
 )
 
 export const GridItemStyle = () => (
