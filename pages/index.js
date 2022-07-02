@@ -53,8 +53,8 @@ const Home = () => (
         >
           <Box
             borderStyle="solid"
-            w="100px"
-            h="100px"
+            w="200px"
+            h="200px"
             display="inline-block"
             borderRadius="full"
             overflow="hidden"
@@ -72,16 +72,16 @@ const Home = () => (
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Is
+          About me
         </Heading>
         <Paragraph>
-          Matheus is a full-stack developer based in Brazil with passion for
+          I&apos;m a full-stack developer based in Brazil with passion for
           building apps and web apps. He has good experience in tech, from
           planning and designing all the way to solving real-life problems with
-          code. Matheus loves data science and bioinformatics, fields that he is
-          always studying. When not working, he loves to enjoy the free time
+          code. I love data science and bioinformatics, fields that I&apos;m
+          always studying. When not working, I love to enjoy the free time
           hanging out with family/friends, read a good book or watch some
-          series. He is current working for{' '}
+          series. I&apos;m current working for{' '}
           <NextLink
             href="https://www.nextage.com.br/"
             passHref
@@ -93,7 +93,7 @@ const Home = () => (
           as a senior software engineer.
         </Paragraph>
         <Box align="center" my={4}>
-          <NextLink href="/works" passHref scroll={false}>
+          <NextLink href="/projects" passHref scroll={false}>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               My portfolio
             </Button>

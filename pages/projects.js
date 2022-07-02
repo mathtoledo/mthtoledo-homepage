@@ -9,8 +9,8 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkItem } from '../components/grid-item'
 
-const Works = () => (
-  <Layout title="Works">
+const Projects = () => (
+  <Layout title="Projects">
     <Container maxW="container.md">
       <Box
         borderRadius="lg"
@@ -20,7 +20,7 @@ const Works = () => (
         textAlign="center"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
       >
-        Here&apos;s some of my works.
+        Here&apos;s some of my projects.
       </Box>
 
       <SimpleGrid columns={[1, 1, 1]} gap={6}>
@@ -111,5 +111,5 @@ const Works = () => (
   </Layout>
 )
 
-export default Works
+export default Projects
 export { getServerSideProps } from '../components/chakra'
