@@ -76,7 +76,7 @@ const Home = () => (
         </Heading>
         <Paragraph>
           I&apos;m a full-stack developer based in Brazil with passion for
-          building apps and web apps. He has good experience in tech, from
+          building apps and web apps. I have good experience in tech, from
           planning and designing all the way to solving real-life problems with
           code. I love data science and bioinformatics, fields that I&apos;m
           always studying. When not working, I love to enjoy the free time
