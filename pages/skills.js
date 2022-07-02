@@ -16,6 +16,10 @@ import angular_svg from '../public/svg/angular-svgrepo-com.svg'
 import node_svg from '../public/svg/node-svgrepo-com.svg'
 import java_svg from '../public/svg/java-svgrepo-com.svg'
 import ionic_svg from '../public/svg/ionic-svgrepo-com.svg'
+import leadership_svg from '../public/svg/leadership-svgrepo-com.svg'
+import communication_svg from '../public/svg/chatting-chat-svgrepo-com.svg'
+import teamwork_svg from '../public/svg/teamwork-svgrepo-com.svg'
+import problem_solving_svg from '../public/svg/light-bulb-idea-svgrepo-com.svg'
 
 const Skills = () => (
   <Layout title="Skills">
@@ -33,11 +37,27 @@ const Skills = () => (
       </Box>
 
       <Heading variant="section-title" mb={5}>
+        Soft Skills
+      </Heading>
+
+      <Section delay={0.2}>
+        <SimpleGrid columns={[2, 3, 5]} gap={3}>
+          <SimpleGridItem title="Leadership" thumbnail={leadership_svg} />
+          <SimpleGridItem title="Communication" thumbnail={communication_svg} />
+          <SimpleGridItem title="Teamwork" thumbnail={teamwork_svg} />
+          <SimpleGridItem
+            title="Problem Solving"
+            thumbnail={problem_solving_svg}
+          />
+        </SimpleGrid>
+      </Section>
+
+      <Heading variant="section-title" mb={5}>
         Programming
       </Heading>
 
       <Section delay={0.2}>
-        <SimpleGrid columns={[2, 3, 5]} gap={6}>
+        <SimpleGrid columns={[2, 3, 5]} gap={3}>
           <SimpleGridItem title="JavaScript" thumbnail={js_svg} />
           <SimpleGridItem title="Node" thumbnail={node_svg} />
           <SimpleGridItem title="React" thumbnail={react_svg} />
