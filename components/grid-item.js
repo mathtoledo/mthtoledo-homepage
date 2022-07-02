@@ -78,11 +78,9 @@ export const WorkItem = ({ title, text, year, category, stack, website }) => (
           <ChevronRightIcon />
         </Box>
         <Box align={'left'} mb={2}>
-          <Badge fontSize={16} color={'teal'}>
+          <Badge fontSize={16} color={'teal'} mr={2}>
             {year}
           </Badge>
-        </Box>
-        <Box>
           <Badge fontSize={16} color={'teal'}>
             {category}
           </Badge>
@@ -93,7 +91,7 @@ export const WorkItem = ({ title, text, year, category, stack, website }) => (
           <Box align={'left'}>
             <Meta>Website</Meta>
           </Box>
-          <Link href={website} target="_blank">
+          <Link href={website} target="_blank" overflow={'auto'}>
             {website} <ExternalLinkIcon mx="2px" />
           </Link>
         </Stack>
